@@ -15,7 +15,7 @@ const logoutUser = () =>{
 }
 
 return (
-    <nav className="bg-gray-800 p-4 text-white rounded-full m-2 flex justify-between items-center">
+    <nav className="bg-gray-800 p-4 text-white rounded-full m-2 flex justify-between items-center flex-col md:flex-row">
         <NavLink className="px-4 text-5xl" to="/">Social-X</NavLink>
 
 
@@ -23,7 +23,7 @@ return (
         <span className='flex justify-center items-center'>
             <p className='text-xl mx-2'>{user?.username?.toUpperCase()}</p>
             <button className='bg-red-500 m-2 p-2 px-4 rounded-full' onClick={logoutUser}>Logout</button>
-        </span> : <span>
+        </span> : <span className='my-4'>
           <NavLink 
             className="bg-blue-300 m-2 p-2 px-4 rounded-full hover:bg-transparent border border-blue-300" 
             to="/register" 
